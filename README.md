@@ -1,6 +1,6 @@
 # standard_deep-learning-models
 
-All these benchmark aretrained on the imagenet dataset
+All these benchmark are trained on the imagenet dataset
 
 ## Download benchmark model
 #python deepModelsSaver.py --networkName InceptionV3    
