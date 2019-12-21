@@ -1,5 +1,5 @@
 # standard_deep-learning-models
 
-## download benchmark model
+## Download benchmark model
 #python deepModelsSaver.py --networkName InceptionV3    
 #python deepModelsSaver.py --networkName all
