@@ -5,7 +5,7 @@
 #python benchMarkModelPredictor.py --networkName InceptionResNetV2 --img_path images/pers3.jpg
 #python benchMarkModelPredictor.py --networkName InceptionV3  --img_path images/pers3.jpg
 #python benchMarkModelPredictor.py --networkName  NASNetLarge --img_path images/dog_beagle.png  
-#python benchMarkModelPredictor.py --networkName  NASNetMobile --img_path images/pers3.jpg 
+#python benchMarkModelPredictor.py --networkName  NASNetMobile --img_path images/elph.jpeg
 #python benchMarkModelPredictor.py --networkName  VGG19 --img_path images/pers3.jpg 
 #python benchMarkModelPredictor.py --networkName  VGG16 --img_path images/pers3.jpg 
 #python benchMarkModelPredictor.py --networkName  DenseNet121 --img_path images/pers3.jpg 
@@ -193,10 +193,11 @@ def predict(networkName,model,img_path):
 
 	# display the predictions to our screen
 	print("ImageNet ID: {}, Label: {}".format(inID, label))
-	cv2.putText(orig, "Label: {} ".format(label), (10, 30),cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
-	cv2.putText(orig, "network {}".format(networkName), (10, 80),cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
-
+	cv2.putText(orig, "Label: {} ".format(label), (10, 30),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+	cv2.putText(orig, "Network: {}".format(networkName), (10, 80),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+	fileName=os.path.basename(img_path) 
 	cv2.imshow("Classification Results", orig)
+	cv2.imwrite(os.path.join("results",fileName),orig)
 	cv2.waitKey(0)
 
 
