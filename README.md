@@ -4,11 +4,13 @@ This code in this repo enables you to download the benchmark deep learningKeras 
 Each available  network is identified by a unique I.D.  , the type  of network can be infereded from the i.d.
 
 
-These are the avilabile I.D.s
+These are the list of avilabile I.D.s
 ["InceptionV3","ResNet50","VGG16","VGG19","NASNetMobile","NASNetLarge","InceptionResNetV2","MobileNet","DenseNet121","DenseNet169","DenseNet201"]
 
 ## Download benchmark model
+You can choose a certain model to save (for ex InceptionV3)
 #python deepModelsSaver.py --networkName InceptionV3    
+you can also download all the models as follows
 #python deepModelsSaver.py --networkName all
 
 ## image classification using  a benchmark model 
