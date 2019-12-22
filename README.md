@@ -14,7 +14,7 @@ you can also download all the models to your computer as follows
 #python deepModelsSaver.py --networkName all
 
 ## image classification using  a benchmark model 
-you can choose to classify a certain image with a certain model as follows:
+you can choose to classify a certain image with a certain model as follows:  </br>
 #python benchMarkModelPredictor.py --networkName  NASNetLarge --img_path images/dog_beagle.png  
 
 
