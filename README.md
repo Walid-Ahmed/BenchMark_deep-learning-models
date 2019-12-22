@@ -1,4 +1,4 @@
-# standard_deep-learning-models
+# Benchmark_deep-learning-models
 
 The code in this repo enables you to download the benchmark deep learning Keras  models as files saved to your system. All these benchmark models are pretrained on the imagenet dataset. </br>
 Each available  network is identified by a unique I.D.  , the type  of network can be infereded from the i.d.
