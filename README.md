@@ -20,3 +20,11 @@ python benchMarkModelPredictor.py --networkName  NASNetLarge --img_path images/d
 
 
  ![Sample classiffication](https://github.com/Walid-Ahmed/standard_deep-learning-models/blob/master/results/elph.jpeg)
+
+## Classification of a folder of images  using  a benchmark model 
+
+you can choose to classify a collection of images in a folder  with an imagenet label with a certain model as follows:  </br>
+
+python benchMarkModelPredictorFolder.py --networkName NASNetLarge --folder_path imagenet_images
+
+A video will be created showing results of classification.
