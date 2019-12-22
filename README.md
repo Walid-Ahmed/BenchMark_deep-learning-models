@@ -8,12 +8,13 @@ These are the list of avilabile I.D.s
 ["InceptionV3","ResNet50","VGG16","VGG19","NASNetMobile","NASNetLarge","InceptionResNetV2","MobileNet","DenseNet121","DenseNet169","DenseNet201"]
 
 ## Download benchmark model
-You can choose a certain model to save (for ex InceptionV3)
+You can choose a certain model to save to your computer  (for ex InceptionV3)
 #python deepModelsSaver.py --networkName InceptionV3    
-you can also download all the models as follows
+you can also download all the models to your computer as follows
 #python deepModelsSaver.py --networkName all
 
 ## image classification using  a benchmark model 
+you can choose to classify a certain image with a certain model as follows:
 #python benchMarkModelPredictor.py --networkName  NASNetLarge --img_path images/dog_beagle.png  
 
 
