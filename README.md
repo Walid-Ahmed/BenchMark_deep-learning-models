@@ -29,3 +29,8 @@ you can choose to classify a collection of images in a folder  with an imagenet 
 python benchMarkModelPredictorFolder.py --networkName NASNetLarge --folder_path imagenet_images
 
 A video will be created showing results of classification.
+
+
+##Credits
+
+Imagenet images where downloaded using https://github.com/mf1024/ImageNet-Datasets-Downloader
