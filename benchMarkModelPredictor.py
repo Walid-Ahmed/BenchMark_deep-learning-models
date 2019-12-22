@@ -30,14 +30,15 @@ from keras.applications import  nasnet
 from keras.applications import vgg19 
 from keras.applications import densenet
 
-from deepModelsLoader import loadBenchMarksModel
+#from deepModelsLoader import loadBenchMarksModel
 
 import argparse
 
 import cv2
 
 import os
-
+import deepModelsSaver
+from util import paths
 
 
 
@@ -194,7 +195,7 @@ def predict(networkName,model,img_path):
 	# display the predictions to our screen
 	print("ImageNet ID: {}, Label: {}".format(inID, label))
 	cv2.putText(orig, "Label: {} ".format(label), (10, 30),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-	cv2.putText(orig, "Network: {}".format(networkName), (10, 80),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+	cv2.putText(orig, "Network: {}".format(networkName), (10, 50),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 	fileName=os.path.basename(img_path) 
 	cv2.imshow("Classification Results", orig)
 	cv2.imwrite(os.path.join("results",fileName),orig)
@@ -224,8 +225,14 @@ if __name__ == "__main__":
     networkName=args["networkName"]
     img_path=args["img_path"]
 
-    MobileNetModel= loadBenchMarksModel(networkName)
-    predict(networkName,MobileNetModel,img_path)
+    #model= loadBenchMarksModel(networkName)
+    model=deepModelsSaver.getModel(networkName)
+    img_paths=paths.list_images(imagenet_images)
+    print(img_paths)
+
+    exit()
+
+    predict(networkName,model,img_path)
 
 
 

@@ -29,6 +29,10 @@ from keras.applications.densenet import DenseNet201
 
 import argparse
 import os
+import deepModelsSaver
+
+from keras.models import load_model
+
 
 
 def getModel(networkName):
@@ -36,14 +40,17 @@ def getModel(networkName):
 	if (networkName=="InceptionV3"):
 
 		filepathModel=os.path.join("models","InceptionV3_ImageNet_299px.h5")
+
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
 		else:	
 			model = InceptionV3(weights='imagenet')
 			model.save(filepathModel)
 			model.summary()
-			print("[INFO] Model {} saved ".format(networkName))
-
+			print("[INFO] Model {} saved  to file {} ".format(networkName,filepathModel))
+		return model
 
 
 
@@ -52,11 +59,15 @@ def getModel(networkName):
 		filepathModel=os.path.join("models","ResNet50_ImageNet_224px.h5")
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
+
 		else:	
 			model= ResNet50(weights='imagenet')
 			model.save(filepathModel)
 			model.summary()
-			print("[INFO] Model {} saved ".format(networkName))
+			print("[INFO] Model {} saved  to file {} ".format(networkName,filepathModel))
+		return model
 
 
 
@@ -67,26 +78,31 @@ def getModel(networkName):
 		filepathModel=os.path.join("models","VGG16_ImageNet_224px.h5")
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
 		else:	
 			model= VGG16(weights='imagenet')
 			model.save(filepathModel)
 			model.summary()
-			print("[INFO] Model {} saved ".format(networkName))
+			print("[INFO] Model {} saved  to file {} ".format(networkName,filepathModel))
+		return model
 
 
 
 
 	if (networkName=="VGG19"):
-
 		filepathModel=os.path.join("models","VGG19_ImageNet_224px.h5")
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
 		else:	
 			model= VGG19(weights='imagenet')
 
 			model.save(filepathModel)
 			model.summary()
-			print("[INFO] Model {} saved ".format(networkName))
+			print("[INFO] Model {} saved  to file {} ".format(networkName,filepathModel))
+		return model
 
 
 
@@ -95,24 +111,30 @@ def getModel(networkName):
 		filepathModel=os.path.join("models","NASNetMobile_ImageNet_224px.h5")
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
 		else:	
 			model =NASNetMobile(input_shape=(224, 224, 3), include_top=True, weights='imagenet')
 
 			model.save(filepathModel)
 			model.summary()
 			print("[INFO] Model {} saved ".format(networkName))
+		return model
 
 	if (networkName=="NASNetLarge"):
 
 		filepathModel=os.path.join("models","NASNetLarge_ImageNet_224px.h5")
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
 		else:	
 			model =NASNetLarge(input_shape=(331, 331, 3), include_top=True, weights='imagenet')
 
 			model.save(filepathModel)
 			model.summary()
-			print("[INFO] Model {} saved ".format(networkName))
+			print("[INFO] Model {} saved  to file {} ".format(networkName,filepathModel))
+		return model
 
 		
 
@@ -121,12 +143,15 @@ def getModel(networkName):
 		filepathModel=os.path.join("models","InceptionResNetV2_ImageNet_299px.h5")
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
 		else:	
 			model =InceptionResNetV2(include_top=True, weights='imagenet')
 
 			model.save(filepathModel)
 			model.summary()
-			print("[INFO] Model {} saved ".format(networkName))
+			print("[INFO] Model {} saved  to file {} ".format(networkName,filepathModel))
+		return model
 
 
 
@@ -134,12 +159,15 @@ def getModel(networkName):
 		filepathModel=os.path.join("models","MobileNet_ImageNet_299px.h5")
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
 		else:	
 			model =InceptionResNetV2(include_top=True, weights='imagenet')
 
 			model.save(filepathModel)
 			model.summary()
-			print("[INFO] Model {} saved ".format(networkName))
+			print("[INFO] Model {} saved  to file {} ".format(networkName,filepathModel))
+		return model
 
 		
 
@@ -150,12 +178,15 @@ def getModel(networkName):
 		filepathModel=os.path.join("models","DenseNet121_ImageNet_224px.h5")
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
 		else:	
 			model =DenseNet121(include_top=True, weights='imagenet')
 
 			model.save(filepathModel)
 			model.summary()
 			print("[INFO] Model {} saved ".format(networkName))
+		return model
 
 		
 
@@ -163,24 +194,30 @@ def getModel(networkName):
 		filepathModel=os.path.join("models","DenseNet169_ImageNet_224px.h5")
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
 		else:	
 			model =DenseNet169(include_top=True, weights='imagenet')
 
 			model.save(filepathModel)
 			model.summary()
-			print("[INFO] Model {} saved ".format(networkName))
+			print("[INFO] Model {} saved  to file {} ".format(networkName,filepathModel))
+		return model
 
 
 	if (networkName=="DenseNet201"):
 		filepathModel=os.path.join("models","DenseNet201_ImageNet_224px.h5")
 		if(os.path.exists(filepathModel)):
 			print("[INFO] Model {} already exists".format(networkName))
+			model=load_model(filepathModel)
+
 		else:	
 			model =DenseNet201(include_top=True, weights='imagenet')
 
 			model.save(filepathModel)
 			model.summary()
-			print("[INFO] Model {} saved ".format(networkName))
+			print("[INFO] Model {} saved  to file {} ".format(networkName,filepathModel))
+		return model
 
 	
 
