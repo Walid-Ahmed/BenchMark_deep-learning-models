@@ -1,6 +1,6 @@
 # standard_deep-learning-models
 
-This code in this repo enables you to download the benchmark deep learningKeras  models as files saved to your system. All these benchmark are trained on the imagenet dataset. </br>
+This code in this repo enables you to download the benchmark deep learning Keras  models as files saved to your system. All these benchmark models are pretrained on the imagenet dataset. </br>
 Each available  network is identified by a unique I.D.  , the type  of network can be infereded from the i.d.
 
 
@@ -15,7 +15,7 @@ you can also download all the models to your computer as follows </br>
 python deepModelsSaver.py --networkName all
 
 ## image classification using  a benchmark model 
-you can choose to classify a certain image with a certain model as follows:  </br>
+you can choose to classify a certain image with an imagenet label with a certain model as follows:  </br>
 python benchMarkModelPredictor.py --networkName  NASNetLarge --img_path images/dog_beagle.png  
 
 
