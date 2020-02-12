@@ -31,6 +31,6 @@ python benchMarkModelPredictorFolder.py --networkName NASNetLarge --folder_path 
 A video will be created showing results of classification.
 
 
-##Credits
+## Credits
 
-Imagenet images where downloaded using https://github.com/mf1024/ImageNet-Datasets-Downloader
+Imagenet images were downloaded using https://github.com/mf1024/ImageNet-Datasets-Downloader
