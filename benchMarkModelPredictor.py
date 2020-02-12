@@ -229,10 +229,10 @@ if __name__ == "__main__":
 
     #model= loadBenchMarksModel(networkName)
     model=deepModelsSaver.getModel(networkName)
-    img_paths=paths.list_images(imagenet_images)
-    print(img_paths)
+    #img_paths=paths.list_images(imagenet_images)
+    #print(img_paths)
 
-    exit()
+    #exit()
 
     predict(networkName,model,img_path)
 
