@@ -1,3 +1,4 @@
+#This script is used to predict  classes of  images in folder using a deep benchmark model
 
 
 #python benchMarkModelPredictorFolder.py --networkName NASNetLarge --folder_path imagenet_images

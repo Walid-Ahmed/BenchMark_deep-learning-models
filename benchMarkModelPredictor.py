@@ -1,5 +1,7 @@
 
 
+#This script is used to predict a class of an image using a deep benchmark model
+
 #python benchMarkModelPredictor.py --networkName MobileNet --img_path images/pers3.jpg
 #python benchMarkModelPredictor.py --networkName ResNet50 --img_path images/pers3.jpg
 #python benchMarkModelPredictor.py --networkName InceptionResNetV2 --img_path images/pers3.jpg

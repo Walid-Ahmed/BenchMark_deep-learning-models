@@ -1,3 +1,4 @@
+#This script is used to download  deep models  
 
 
 #python deepModelsSaver.py --networkName InceptionV3    
